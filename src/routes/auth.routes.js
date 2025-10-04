@@ -2,6 +2,7 @@
 
 const express = require('express');
 const { registerUser } = require('../controllers/auth.controller'); // Controller import
+const { loginUser } = require('../controllers/auth.controller');
 
 const router = express.Router();
 
@@ -13,5 +14,6 @@ GET    /auth/user       → Get user info (to be added)
 */
 
 router.post('/register', registerUser); // Controller handles logic
+router.post('/login', loginUser); // Login route
 
 module.exports = router;
